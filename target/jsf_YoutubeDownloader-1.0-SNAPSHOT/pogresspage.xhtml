@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>YouTube Download</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+
+    <h:body class="container ">
+        <h:panelGroup>
+            <h:form style="width:70%;margin: 100px auto" id="myform">
+                <h1>Processing Download link....Please Wait!</h1>
+                <p:commandButton style="display: none" id="hiidenButton" action="#{handler.doStart(url,format)}"/>
+                <p:progressBar id="progressBarIndeterminate" style="height:30px" mode="indeterminate"/>
+            </h:form>
+        </h:panelGroup>
+
+        <h:outputScript>
+            function myf(){
+            document.getElementById("myform:hiidenButton").click();
+            }
+            myf();
+        </h:outputScript>
+
+    </h:body>
+
+</html>

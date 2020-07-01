@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>YouTube Download</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+        <style>
+            .button{
+                padding: 5px;
+                
+            }
+        </style>
+        
+    </h:head>
+    <h:body class="container ">
+        <h:panelGroup>
+            <h:form style="margin:100px auto;width: 60%">
+                <h2 style="font-size:2em;font-weight:bold;padding-left:10px;" >Input Youtube Video Link:</h2>
+                <h:panelGrid columns="2" cellpadding="5">
+                    <p:inputText style="width:600px" id="name" value="#{handler.url}" />
+                    <p:selectOneMenu value="#{handler.format}" style="width:125px">
+                        <f:selectItem itemLabel="Select format" itemValue="" />
+                        <f:selectItem itemLabel="MP4" itemValue="mp4" />
+                        <f:selectItem itemLabel="MP3" itemValue="mp3" />
+                    </p:selectOneMenu>
+                    <p:commandButton styleClass="button" value="Download" action="#{handler.gotopogresspage}" icon="pi pi-download"/>
+                </h:panelGrid>
+                
+            </h:form>
+        </h:panelGroup>
+
+
+    </h:body>
+</html>

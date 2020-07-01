@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>YouTube Download</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+    </h:head>
+
+    <h:body class="container ">
+        <h:panelGroup>
+            <h:panelGrid style="width: 50%;margin: 100px auto" columns="1">
+                <h1>Download Ready</h1>
+                <h:outputLink style="font-size: 1.2em;text-decoration: none"  value="#{downloadLink}">Click Here To Preview</h:outputLink>
+                <h:form>
+                    <h:commandButton style="padding: 5px;font-size:1.2em" action="#{handler.DownloadWebPage()}" value="Download" />
+                </h:form>
+            </h:panelGrid>
+
+        </h:panelGroup>
+
+
+
+
+
+    </h:body>
+
+</html>
